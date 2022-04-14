@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "IQ4E45Ifn52o92+96FYvUiBQ372LPK5g01kikOn81tSJyymZcCjvJGUHmowZdx4QmvXCu2lUUQceqcyQ0W+l7Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\Cooking-Assistant-Plugin\\CookingAssistantPlugin\\CookingAssistantPlugin.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\bepinex.analyzers\\1.0.8\\bepinex.analyzers.1.0.8.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\bepinex.baselib\\5.4.19\\bepinex.baselib.5.4.19.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\bepinex.core\\5.4.19\\bepinex.core.5.4.19.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\bepinex.plugininfoprops\\1.1.0\\bepinex.plugininfoprops.1.1.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\harmonyx\\2.7.0\\harmonyx.2.7.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net46\\1.0.2\\microsoft.netframework.referenceassemblies.net46.1.0.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\mono.cecil\\0.11.4\\mono.cecil.0.11.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\monomod.runtimedetour\\21.12.13.1\\monomod.runtimedetour.21.12.13.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\monomod.utils\\21.12.13.1\\monomod.utils.21.12.13.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\unityengine.modules\\2019.4.6\\unityengine.modules.2019.4.6.nupkg.sha512"
+  ],
+  "logs": []
+}
