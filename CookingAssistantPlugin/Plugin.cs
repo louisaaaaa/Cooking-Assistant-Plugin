@@ -24,10 +24,11 @@ namespace CookingAssistantPlugin
         {
             var objid = __instance.gameObject.GetInstanceID();
             __state = objid;
-            FileLog.Log("cutprefix_id: " + objid.ToString());
+            //FileLog.Log("cutprefix_id: " + objid.ToString());
             Console.WriteLine("cutprefix_id: " + objid.ToString());
+            Console.WriteLine("cutobject_name: " + __instance.gameObject.name);
             var cutcount = __instance.Sliceable.CutCount;
-            FileLog.Log(cutcount.ToString());
+            //FileLog.Log(cutcount.ToString());
             Console.WriteLine("pre_cutcount: " + cutcount.ToString());
         }
         
@@ -49,7 +50,14 @@ namespace CookingAssistantPlugin
             //have problem
             foreach (Plugin.UnityObjectTree t in Plugin.objectTree)//Go through tree
             {
-                Console.WriteLine("treelop");
+                //Console.WriteLine("treelop");
+                Console.WriteLine("originalid: "+t.OriginalId);
+                Console.WriteLine("type: " + t.ObjectType);
+                foreach (var i in t.ChildrenIds)
+                {
+                    Console.WriteLine("childrenid: " + i);
+                }
+               
                 if (t.ChildrenIds.Contains(__state))//if ori object is a child
                 {
                     Console.WriteLine("cutfunction");
@@ -59,11 +67,6 @@ namespace CookingAssistantPlugin
         }
         
         
-        [HarmonyPatch(typeof(ProductsManager), "CreateProduct", new[] { typeof(Product), typeof(int), typeof(SpawnPoint), typeof(Vector3), typeof(Quaternion), typeof(bool), typeof(bool) })]
-        [HarmonyPrefix]
-        static void ProductManagerPrefix(Product __instance, int id, object[] __args)
-        {
-        }
         
         [HarmonyPatch(typeof(ProductsManager), "CreateProduct", new []{typeof(Product), typeof(int), typeof(SpawnPoint), typeof(Vector3), typeof(Quaternion), typeof(bool), typeof(bool)} )]
         [HarmonyPostfix]
@@ -73,13 +76,41 @@ namespace CookingAssistantPlugin
             FileLog.Log(objid.ToString());
             Console.WriteLine("createobject: "+objid.ToString());
             Console.WriteLine("createobject_id: " + id);
+            Console.WriteLine("createobject_name: " + __result.gameObject.name);
+            if (nameToTypeDictionary.ContainsKey(id))
+            {
+                var objectType = nameToTypeDictionary[id];  
+                Plugin.UnityObjectTree objtree = new Plugin.UnityObjectTree(objid-8, objectType);//create object
+                Plugin.objectTree.Add(objtree);//push to list
+            }
+        }
+
         
-            Plugin.UnityObjectTree objtree = new Plugin.UnityObjectTree(objid, nameToTypeDictionary[id]);//create object
-            Plugin.objectTree.Add(objtree);//push to list
-            
+        [HarmonyPatch(typeof(MovablePhysics), "Temperature", MethodType.Setter)]
+        [HarmonyPrefix]
+        static void TemperaturePrefix(MovablePhysics __instance, float value)
+        {
+           
+            if (Mathf.Abs(__instance.Temperature - value) > 2e-2f)
+            {
+                var objid = __instance.gameObject.GetInstanceID();
+                foreach (var i in Plugin.objectTree)
+                {
+                    if (objid == i.OriginalId)
+                    {
+                        Console.WriteLine("temperature_object_name: " + __instance.gameObject.name);
+                        Console.WriteLine("temperature: " + value);
+                        break;
+                    }
+                    
+                }
+               
+            }
+           
         }
         
-        
+
+
 
         private static Dictionary<int, string> nameToTypeDictionary = new Dictionary<int, string>
         {

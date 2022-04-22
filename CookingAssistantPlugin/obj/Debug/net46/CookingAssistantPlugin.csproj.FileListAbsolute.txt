@@ -69,7 +69,6 @@ C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\b
 C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\bin\Debug\net46\DOTween43.dll
 C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\bin\Debug\net46\AsyncIO.dll
 C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\bin\Debug\net46\UnityEngine.SpatialTracking.dll
-C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\obj\Debug\net46\CookingAssistantPlugin.csproj.AssemblyReference.cache
 C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\obj\Debug\net46\PluginInfo.cs
 C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\obj\Debug\net46\CookingAssistantPlugin.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\obj\Debug\net46\CookingAssistantPlugin.AssemblyInfoInputs.cache
@@ -78,3 +77,4 @@ C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\o
 C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\obj\Debug\net46\CookingAssistantPlugin.csproj.CopyComplete
 C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\obj\Debug\net46\CookingAssistantPlugin.dll
 C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\obj\Debug\net46\CookingAssistantPlugin.pdb
+C:\Users\Administrator\Desktop\Cooking-Assistant-Plugin\CookingAssistantPlugin\obj\Debug\net46\CookingAssistantPlugin.csproj.AssemblyReference.cache
